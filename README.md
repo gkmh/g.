@@ -29,6 +29,7 @@
 [홈페이지](https://gkmh.github.io/g./)
 
 ## 5.코드처리사항
+< !-- 코드 블록 -->
 ```javascript
 print("Hello World!");
 arr[1, 2, 3, 4, 5]
