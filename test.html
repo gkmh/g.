@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Archive</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+        }
+
+        /* 상단 메뉴 */
+        header {
+            background: #172554;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* 메인 소개 */
+        .intro {
+            background: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .intro h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #dbeafe;
+            font-size: 16px;
+        }
+
+        /* 검색창 */
+        .search {
+            margin: 25px auto 0;
+            max-width: 450px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        /* 콘텐츠 영역 */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* 학습 분야 */
+        .category {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #222;
+            box-shadow: 0 2px 8px #00000010;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #00000020;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #1e40af;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 최근 학습 기록 */
+        .recent {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .recent h3 {
+            margin-bottom: 8px;
+        }
+
+        .recent p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 하단 */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .category {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>STUDY ARCHIVE</h2>
+
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="#category">학습 분야</a>
+            <a href="#recent">최근 기록</a>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>나만의 공부 기록</h1>
+        <p>배운 것을 기록하고, 정리하고, 다시 학습하는 공간</p>
+
+        <div class="search">
+            <input type="text" placeholder="공부한 내용을 검색하세요.">
+        </div>
+    </div>
+
+    <main>
+
+        <section id="category">
+            <h2>학습 분야</h2>
+
+            <div class="category">
+
+                <a href="programming.html" class="card">
+                    <h3>프로그래밍</h3>
+                    <p>Java · Python · JavaScript</p>
+                </a>
+
+                <a href="database.html" class="card">
+                    <h3>데이터베이스</h3>
+                    <p>SQL · 데이터베이스 설계 · 정규화</p>
+                </a>
+
+                <a href="network.html" class="card">
+                    <h3>네트워크</h3>
+                    <p>TCP/IP · HTTP · 네트워크 통신</p>
+                </a>
+
+                <a href="security.html" class="card">
+                    <h3>정보 보안</h3>
+                    <p>암호화 · 웹 보안 · 공격 기법</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="recent">
+            <h2>최근 학습 기록</h2>
+
+            <div class="recent">
+                <h3>SQL 서브쿼리 정리</h3>
+                <p>스칼라 서브쿼리 · 인라인 뷰 · 상관 서브쿼리</p>
+            </div>
+
+            <div class="recent">
+                <h3>Java 객체지향 프로그래밍</h3>
+                <p>클래스 · 상속 · 다형성</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>My Study Archive</p>
+        <p>개인 학습 기록 및 자료 정리</p>
+    </footer>
+
+</body>
+</html>
